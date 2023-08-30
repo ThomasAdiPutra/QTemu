@@ -19,11 +19,9 @@ jobs:
           script: |
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
-            nvm install 16
             nvm use 16
-            npm install -g pm2
             cd /var/www/html/QTemu
             git pull
             yarn
             yarn build
-            npx pm2 restart 2
+            pm2 serve /var/www/html/QTemu/build 5000
