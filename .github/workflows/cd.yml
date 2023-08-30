@@ -24,4 +24,4 @@ jobs:
             git pull
             yarn
             yarn build
-            pm2 serve /var/www/html/QTemu/build 5000
+            pm2 restart static-page-server-5000
