@@ -4,7 +4,7 @@ import CardBody from '../../atoms/card-body'
 
 export default function Card({ title, className = '', children }) {
   return (
-    <div className={`bg-gray-300 px-6 pt-3 pb-5 ${className}`} style={{ minWidth: 300 }}>
+    <div className={`bg-gray-300 px-6 pt-3 pb-5 ${className}`}>
       { title && <CardHeader title={title}/> }
       <CardBody>
         { children }
