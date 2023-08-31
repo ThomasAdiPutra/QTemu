@@ -23,5 +23,6 @@ jobs:
             cd /var/www/html/QTemu
             git pull
             yarn
+            npx tailwindcss -i ./src/index.css -o ./src/output.css
             yarn build
             pm2 restart static-page-server-5000
